@@ -5,6 +5,7 @@
   "author": "Nguyen Hoang Nam",
   "license": "MIT",
   "dependencies": {
+    "mongoose": "^5.9.7",
     "mysql": "^2.18.1"
   }
 }
