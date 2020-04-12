@@ -1,0 +1,10 @@
+{
+  "name": "mysqler",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Nguyen Hoang Nam",
+  "license": "MIT",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
+}
