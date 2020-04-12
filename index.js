@@ -1,3 +1,3 @@
-const mysqler = require('./lib/index')
+const mysqler = require("./lib/index");
 
-module.exports = new mysqler()
+module.exports = new mysqler();
