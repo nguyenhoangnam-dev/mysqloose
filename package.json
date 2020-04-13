@@ -1,15 +1,24 @@
 {
   "name": "mysqloose",
-  "version": "1.0.0-beta.0",
   "description": "This is similar to mongoose api but for mysql",
+  "version": "1.0.0-beta.1",
+  "author": "Nguyen Hoang Nam",
+  "keywords": [
+    "mysql",
+    "orm",
+    "db"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "node test.js"
   },
-  "author": "Nguyen Hoang Nam",
   "license": "MIT",
   "dependencies": {
     "mongoose": "^5.9.7",
     "mysql": "^2.18.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/congviec18120062/mysqloose.git"
   }
 }
