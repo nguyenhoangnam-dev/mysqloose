@@ -1,6 +1,6 @@
 {
   "name": "mysqloose",
-  "version": "1.0.0",
+  "version": "1.0.0-beta.0",
   "description": "This is similar to mongoose api but for mysql",
   "main": "index.js",
   "scripts": {
