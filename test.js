@@ -16,14 +16,21 @@ const userSchema = new Schema({
 
 const User = mysqler.model("users", userSchema);
 
-const newUser = new User({
-  name: "abc",
-  email: "def",
-  password: "abcdef",
-});
+// const newUser = new User({
+//   name: "taylor",
+//   email: "swift",
+//   password: "taylorswift",
+// });
 
-newUser.save((err, results) => {
+// newUser.save((err, results) => {
+//   if (err) throw err;
+
+//   console.log(results);
+// });
+
+// @ts-ignore
+User.find({ name: "taylor" }, "name email", (err, result) => {
   if (err) throw err;
 
-  console.log(results);
+  console.log(result);
 });
