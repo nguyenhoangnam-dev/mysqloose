@@ -20,6 +20,8 @@ $ npm i mysqloose
 const mysqloose = require("mysqloose");
 ```
 
+**Important:** Turn on mysql server before using
+
 ## Overview
 
 **Connecting to MySQL**

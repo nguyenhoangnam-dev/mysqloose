@@ -24,6 +24,8 @@ const User = mysqloose.model("users", userSchema);
 
 // newUser.save((err, results) => {
 //   if (err) throw err;
+
+//   console.log(results);
 // });
 
 // @ts-ignore
@@ -39,20 +41,16 @@ const User = mysqloose.model("users", userSchema);
 //   console.log(result);
 // });
 
-// User.findOne({}, (err, result) => {
+// User.findOne({ name: "name" }, (err, result) => {
 //   if (err) throw err;
 
 //   console.log(result);
 // });
 
-// User.updateOne({}, { email: "katy@perry.com" }, (err, result) => {
+// User.updateOne({}, { email: "katy@perry.com" }, (err) => {
 //   if (err) throw err;
-
-//   console.log(result);
 // });
 
-// User.deleteOne({}, (err, result) => {
+// User.deleteOne({}, (err) => {
 //   if (err) throw err;
-
-//   console.log(result);
 // });
