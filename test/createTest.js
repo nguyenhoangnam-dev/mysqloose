@@ -1,4 +1,4 @@
-const mysqloose = require("./index");
+const mysqloose = require("../index");
 
 mysqloose.connect("mysql://root:root@localhost/test", (err) => {
   if (err) throw err;
