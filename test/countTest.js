@@ -5,7 +5,6 @@ describe("Counting documents", () => {
     User.countDocuments({}, (err, results) => {
       if (err) throw err;
 
-      console.log(results);
       done();
     });
   });
