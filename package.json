@@ -1,7 +1,7 @@
 {
   "name": "mysqloose",
   "description": "This is similar to mongoose api but for mysql",
-  "version": "1.0.0-beta.1",
+  "version": "1.1.0",
   "author": "Nguyen Hoang Nam",
   "keywords": [
     "mysql",
