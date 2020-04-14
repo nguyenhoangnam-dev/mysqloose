@@ -15,4 +15,21 @@ describe("Creating documents", () => {
       done();
     });
   });
+  it("inserts a user", (done) => {
+    let name = faker.name.findName();
+    let email = faker.internet.email();
+    let password = faker.internet.password();
+    User.create(
+      {
+        name,
+        email,
+        password,
+      },
+      (err, result) => {
+        if (err) throw err;
+
+        done();
+      }
+    );
+  });
 });
