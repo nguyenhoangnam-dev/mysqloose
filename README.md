@@ -39,9 +39,16 @@ mysqloose.connect(
 
 **Defining a Model**
 
-Models are defined through the Schema interface.
+Models are defined through the Schema interface. Unlike mongoose, you can not define a model without mysqloose.connect
 
 ```js
+mysqloose.connect(
+  "mysql://<user>:<password>@<hostname>/<database_name>",
+  (err) => {
+    if (err) throw err;
+  }
+);
+
 const Schema = mysqloose.Schema;
 
 const UserSchema = new Schema({
@@ -109,3 +116,18 @@ User.deleteOne({ name: "name" }, (err, result) => {
   console.log(result);
 });
 ```
+
+## Model API
+
+**create( object, callback)**
+**find( object, string, callback )**
+**findOne( object, string, callback )**
+**findOneAndUpdate( object, object, callback )**
+**findOneAndDelete(object, callback )**
+**findById( object, string, callback )**
+**findByIdAndUpdate( object, object, callback )**
+**findByIdAndDelete( object, callback )**
+**updateOne( object, object, callback )**
+**updateMany( object, object, callback )**
+**deleteOne( object, callback)**
+**deleteMany( object, callback)**
