@@ -120,14 +120,25 @@ User.deleteOne({ name: "name" }, (err, result) => {
 ## Model API
 
 **create( object, callback)**
+
 **find( object, string, callback )**
+
 **findOne( object, string, callback )**
+
 **findOneAndUpdate( object, object, callback )**
+
 **findOneAndDelete(object, callback )**
+
 **findById( object, string, callback )**
+
 **findByIdAndUpdate( object, object, callback )**
+
 **findByIdAndDelete( object, callback )**
+
 **updateOne( object, object, callback )**
+
 **updateMany( object, object, callback )**
+
 **deleteOne( object, callback)**
+
 **deleteMany( object, callback)**
