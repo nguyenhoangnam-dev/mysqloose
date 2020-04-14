@@ -10,7 +10,7 @@
   ],
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "nodemon --exec 'mocha -R min'"
   },
   "license": "MIT",
   "dependencies": {
@@ -21,6 +21,7 @@
     "url": "https://github.com/congviec18120062/mysqloose.git"
   },
   "devDependencies": {
+    "faker": "^4.1.0",
     "mocha": "^7.1.1",
     "nodemon": "^2.0.3"
   }

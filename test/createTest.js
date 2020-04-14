@@ -1,56 +1,18 @@
-const mysqloose = require("../index");
+const User = require("./src/user");
+const faker = require("faker");
 
-mysqloose.connect("mysql://root:root@localhost/test", (err) => {
-  if (err) throw err;
+describe("Creating documents", () => {
+  it("creates a user", (done) => {
+    const newUser = new User({
+      name: faker.name.findName(),
+      email: faker.internet.email(),
+      password: faker.internet.password(),
+    });
 
-  console.log("Connect success !!!");
+    newUser.save((err) => {
+      if (err) throw err;
+
+      done();
+    });
+  });
 });
-
-const Schema = mysqloose.Schema;
-const userSchema = new Schema({
-  id: "int not null auto_increment primary key",
-  name: "varchar(20) not null",
-  email: "varchar(255) not null",
-  password: "varchar(60) not null",
-});
-
-const User = mysqloose.model("users", userSchema);
-
-// const newUser = new User({
-//   name: "name",
-//   email: "name@email.com",
-//   password: "nameandemail",
-// });
-
-// newUser.save((err, results) => {
-//   if (err) throw err;
-
-//   console.log(results);
-// });
-
-// @ts-ignore
-// User.find({}, (err, result) => {
-//   if (err) throw err;
-
-//   console.log(result);
-// });
-
-// User.findById(2, "name email", (err, result) => {
-//   if (err) throw err;
-
-//   console.log(result);
-// });
-
-// User.findOne({ name: "name" }, (err, result) => {
-//   if (err) throw err;
-
-//   console.log(result);
-// });
-
-// User.updateOne({}, { email: "katy@perry.com" }, (err) => {
-//   if (err) throw err;
-// });
-
-// User.deleteOne({}, (err) => {
-//   if (err) throw err;
-// });
