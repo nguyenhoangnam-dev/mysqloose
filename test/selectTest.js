@@ -22,23 +22,21 @@ describe("Reading documents", () => {
       if (err) throw err;
 
       assert(user.name === name);
-      done();
     });
+    done();
   });
 
   it("finds all users", (done) => {
     User.find({}, (err, users) => {
       if (err) throw err;
-
-      done();
     });
+    done();
   });
 
   it("finds user with the id of user", (done) => {
     User.findById({ id: 3 }, (err, user) => {
       if (err) throw err;
-
-      done();
     });
+    done();
   });
 });

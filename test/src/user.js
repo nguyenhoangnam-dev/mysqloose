@@ -1,6 +1,7 @@
 const mysqloose = require("../../index");
+require("dotenv/config");
 
-mysqloose.connect("mysql://root:root@localhost/test", (err) => {
+mysqloose.connect(process.env.DB_CONNECTION, (err) => {
   if (err) throw err;
 
   console.log("Connect success !!!");
@@ -9,7 +10,7 @@ mysqloose.connect("mysql://root:root@localhost/test", (err) => {
 const Schema = mysqloose.Schema;
 const userSchema = new Schema({
   id: "int not null auto_increment primary key",
-  name: "varchar(40) not null",
+  name: "varchar(100) not null",
   email: "varchar(255) not null",
   password: "varchar(60) not null",
 });

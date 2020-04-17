@@ -25,9 +25,9 @@ describe("Updating documents", () => {
         if (err) throw err;
 
         assert(user.email === "Updated@mail.com");
-        done();
       });
     });
+    done();
   });
 
   //   // it("deletes user with id", (done) => {
