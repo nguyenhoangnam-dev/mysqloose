@@ -6,16 +6,14 @@ let name = faker.name.findName();
 let email = faker.internet.email();
 let password = faker.internet.password();
 
-beforeEach(() => {
-  const newUser = new User({
-    name,
-    email,
-    password,
-  });
+const newUser = new User({
+  name,
+  email,
+  password,
+});
 
-  newUser.save((err) => {
-    if (err) throw err;
-  });
+newUser.save((err) => {
+  if (err) throw err;
 });
 
 describe("Deleting documents", () => {

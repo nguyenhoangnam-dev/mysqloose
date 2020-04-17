@@ -6,16 +6,14 @@ let name = faker.name.findName();
 let email = faker.internet.email();
 let password = faker.internet.password();
 
-beforeEach(() => {
-  const newUser = new User({
-    name,
-    email,
-    password,
-  });
+const newUser = new User({
+  name,
+  email,
+  password,
+});
 
-  newUser.save((err) => {
-    if (err) throw err;
-  });
+newUser.save((err) => {
+  if (err) throw err;
 });
 
 describe("Updating documents", () => {
@@ -32,16 +30,16 @@ describe("Updating documents", () => {
     });
   });
 
-  // it("deletes user with id", (done) => {
-  //   User.UpdateMany({ id: 18 }, (err) => {
-  //     if (err) throw err;
+  //   // it("deletes user with id", (done) => {
+  //   //   User.UpdateMany({ id: 18 }, (err) => {
+  //   //     if (err) throw err;
 
-  //     User.findOne({ id: 12 }, (err, user) => {
-  //       if (err) throw err;
+  //   //     User.findOne({ id: 12 }, (err, user) => {
+  //   //       if (err) throw err;
 
-  //       assert(user.id === undefined);
-  //       done();
-  //     });
-  //   });
-  // });
+  //   //       assert(user.id === undefined);
+  //   //       done();
+  //   //     });
+  //   //   });
+  //   // });
 });
