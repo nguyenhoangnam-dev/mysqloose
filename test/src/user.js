@@ -9,7 +9,7 @@ mysqloose.connect("mysql://root:root@localhost/test", (err) => {
 const Schema = mysqloose.Schema;
 const userSchema = new Schema({
   id: "int not null auto_increment primary key",
-  name: "varchar(20) not null",
+  name: "varchar(40) not null",
   email: "varchar(255) not null",
   password: "varchar(60) not null",
 });
