@@ -1,6 +1,7 @@
 const mysqloose = require("../../index");
+require("dotenv/config");
 
-mysqloose.connect("mysql://root:root@localhost/test", (err) => {
+mysqloose.connect(process.env.DB_CONNECTION, (err) => {
   if (err) throw err;
 
   console.log("Connect success !!!");

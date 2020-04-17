@@ -1,5 +1,6 @@
 const User = require("./src/user");
 const faker = require("faker");
+const assert = require("assert");
 
 describe("Creating documents", () => {
   it("creates a user", (done) => {
@@ -11,9 +12,8 @@ describe("Creating documents", () => {
 
     newUser.save((err) => {
       if (err) throw err;
-
-      done();
     });
+    done();
   });
   it("inserts a user", (done) => {
     let name = faker.name.findName();
@@ -28,8 +28,9 @@ describe("Creating documents", () => {
       (err, result) => {
         if (err) throw err;
 
-        done();
+        assert(result.name == name);
       }
     );
+    done();
   });
 });
