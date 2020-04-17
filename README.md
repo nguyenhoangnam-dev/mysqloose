@@ -4,6 +4,13 @@
 
 _**warning:**_ _Don not use this in real project, it is unstable_
 
+![David](https://img.shields.io/david/dev/congviec18120062/mysqloose)
+![GitHub repo size](https://img.shields.io/github/repo-size/congviec18120062/mysqloose)
+![npm](https://img.shields.io/npm/v/mysqloose)
+![npm](https://img.shields.io/npm/dw/mysqloose)
+
+[![NPM](https://nodei.co/npm/mysqloose.png)](https://nodei.co/npm/mysqloose/)
+
 ## Installation
 
 You need: [Node.js](https://nodejs.org) installed on your machine.
