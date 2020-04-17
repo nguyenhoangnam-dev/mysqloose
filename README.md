@@ -52,7 +52,7 @@ mysqloose.connect(
 const Schema = mysqloose.Schema;
 
 const UserSchema = new Schema({
-  id: 'INT NOT NULL AUTO_INCREMENT PRIMARY KEY'
+  id: 'INT NOT NULL AUTO_INCREMENT PRIMARY KEY' // mysqloose do not have ObjectId yet
   user_name: 'VARCHAR(40) NOT NULL',
   email: 'VARCHAR(255) NOT NULL',
   password: 'varchar(60) not null' // Case-insensitive
@@ -82,13 +82,16 @@ newUser.save((err) => {
 
 **Select**
 
+Synchronous
+
 ```js
 User.find({ name: "name" }, (err, result) => {
   if (err) throw err;
   console.log(result);
 });
 
-User.findById(1, "name email", (err, result) => {
+// Must use {<somethingId>: <number>}
+User.findById({ id: 1 }, "name email", (err, result) => {
   if (err) throw err;
   console.log(result);
 });
@@ -97,6 +100,34 @@ User.findOne({ name: "name" }, (err, result) => {
   if (err) throw err;
   console.log(result);
 });
+```
+
+Asynchronous
+
+```js
+User.find({ name: "name" })
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((err) => {
+    if (err) throw err;
+  });
+
+User.findById({ id: 1 }, "name email")
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((err) => {
+    if (err) throw err;
+  });
+
+User.findOne({ name: "name" })
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((err) => {
+    if (err) throw err;
+  });
 ```
 
 **Update**

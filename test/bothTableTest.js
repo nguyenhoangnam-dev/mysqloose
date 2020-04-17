@@ -33,8 +33,8 @@ describe("Reading in 2 table documents", () => {
       if (err) throw err;
 
       assert(user.name === name);
-      done();
     });
+    done();
   });
 
   it("finds address with name of city", (done) => {
@@ -42,7 +42,7 @@ describe("Reading in 2 table documents", () => {
       if (err) throw err;
 
       assert(address.country === country);
-      done();
     });
+    done();
   });
 });
